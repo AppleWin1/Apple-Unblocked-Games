@@ -39,6 +39,7 @@ async function init() {
         }
         allGames = await response.json();
         
+        setupTabs();
         renderGallery();
         setupEventListeners();
         
@@ -49,15 +50,64 @@ async function init() {
     }
 }
 
+function setupTabs() {
+    const tabAll = document.getElementById('tab-all');
+    const tabEpstein = document.getElementById('tab-epstein');
+    const tabObby = document.getElementById('tab-obby');
+    const tabEscapeRoad = document.getElementById('tab-escape-road');
+    const tabs = [tabAll, tabEpstein, tabObby, tabEscapeRoad];
+
+    tabs.forEach(tab => {
+        tab.onclick = () => {
+            // Update active state
+            tabs.forEach(t => {
+                t.classList.remove('border-red-400', 'text-white');
+                t.classList.add('border-transparent', 'text-gray-500');
+            });
+            tab.classList.remove('border-transparent', 'text-gray-500');
+            tab.classList.add('border-red-400', 'text-white');
+
+            // Set filter
+            if (tab.id === 'tab-all') currentCategory = 'All';
+            else if (tab.id === 'tab-epstein') currentCategory = 'Epstein';
+            else if (tab.id === 'tab-obby') currentCategory = 'Obby';
+            else if (tab.id === 'tab-escape-road') currentCategory = 'Escape Road';
+            renderGallery();
+        };
+    });
+}
+
 function renderGallery() {
     const filtered = allGames.filter(game => {
         const matchesSearch = game.title.toLowerCase().includes(currentSearch.toLowerCase()) ||
                             game.description.toLowerCase().includes(currentSearch.toLowerCase());
+        
+        if (currentCategory === 'Epstein') {
+            const matchesEpstein = game.id.includes('epstein') || 
+                                   game.id.includes('fnae') || 
+                                   game.title.toLowerCase().includes('epstein');
+            return matchesSearch && matchesEpstein;
+        }
+
+        if (currentCategory === 'Obby') {
+            const matchesObby = game.id === 'slope' || 
+                                game.id === 'geometry-dash' || 
+                                game.title.toLowerCase().includes('slope') || 
+                                game.title.toLowerCase().includes('geometry dash');
+            return matchesSearch && matchesObby;
+        }
+
+        if (currentCategory === 'Escape Road') {
+            const matchesEscapeRoad = game.id.includes('escape-road') || 
+                                      game.title.toLowerCase().includes('escape road');
+            return matchesSearch && matchesEscapeRoad;
+        }
+
         return matchesSearch;
     });
 
     // Update Grid Title and Count
-    gridTitle.textContent = 'Latest Discoveries';
+    gridTitle.textContent = currentCategory === 'All' ? 'Latest Discoveries' : `${currentCategory} Collection`;
     gamesCount.textContent = `${filtered.length} Games`;
 
     // Hero Section visibility
@@ -116,6 +166,8 @@ function playGame(game) {
     backBtn.classList.remove('hidden-view');
     
     gameIframe.src = game.url;
+    // Set requested sandbox attributes for compatibility and security
+    gameIframe.setAttribute('sandbox', 'allow-forms allow-modals allow-same-origin allow-scripts allow-pointer-lock allow-orientation-lock allow-presentation allow-downloads');
     playerGameTitle.textContent = game.title;
     playerGameCategory.textContent = game.category;
     if (playerGameDescription) playerGameDescription.textContent = game.description;

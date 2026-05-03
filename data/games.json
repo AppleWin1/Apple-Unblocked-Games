@@ -14,5 +14,45 @@
     "url": "https://ozgames.io/geometry-dash.embed",
     "category": "Arcade",
     "thumbnail": "https://static.wikia.nocookie.net/b213ondiscord/images/a/a6/Geometrydash.png/revision/latest?cb=20200721125515"
+  },
+  {
+    "id": "fnae",
+    "title": "Five Nights at Epstein's",
+    "description": "A survival horror parody. Can you survive five nights? Watch the cameras, manage your power, and stay alert in this intense office-based challenge.",
+    "url": "https://freedomgamingzone.github.io/five-nights-at-epsteins/",
+    "category": "Horror",
+    "thumbnail": "https://topgames.gg/data/image/game/five-nights-at-epsteins.png"
+  },
+  {
+    "id": "epstein-clicker",
+    "title": "Epstein Clicker",
+    "description": "An addictive incremental clicker game. Click to progress, unlock upgrades, and build your empire in this unique idle experience.",
+    "url": "https://topgames.gg/game/epstein-clicker/",
+    "category": "Clicker",
+    "thumbnail": "https://topgames.gg/data/image/game/epstein-clicker.png"
+  },
+  {
+    "id": "escape-road",
+    "title": "Escape Road",
+    "description": "Drive for your life in this high-octane escape game! Dodge obstacles, outrun the police, and show off your driving skills as you navigate through a dangerous path.",
+    "url": "https://azgames.io/game/escape-road/",
+    "category": "Driving",
+    "thumbnail": "https://topgames.gg/data/image/game/escape-road.png"
+  },
+  {
+    "id": "escape-road-2",
+    "title": "Escape Road 2",
+    "description": "The high-octane sequel to Escape Road! Experience even more intense chases, new vehicles, and challenging environments as you outrun the law once again.",
+    "url": "https://game.azgame.io/escape-road-2/",
+    "category": "Driving",
+    "thumbnail": "https://topgames.gg/data/image/game/escape-road-2.png"
+  },
+  {
+    "id": "escape-road-3",
+    "title": "Escape Road 3",
+    "description": "The third installment in the popular escape driving series! More vehicles, more upgrades, and even more chaotic police chases await you in Escape Road 3.",
+    "url": "https://games.ofree.io/escape-road-3/game.html",
+    "category": "Driving",
+    "thumbnail": "https://azgames.io/upload/imgs/escaperoad3.png"
   }
 ]
