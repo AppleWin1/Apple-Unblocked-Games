@@ -34,6 +34,9 @@ const fullscreenBtn = document.getElementById('fullscreen-btn');
 async function init() {
     try {
         const response = await fetch('./data/games.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         allGames = await response.json();
         
         renderGallery();
