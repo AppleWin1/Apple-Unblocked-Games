@@ -36,7 +36,6 @@ async function init() {
         const response = await fetch('/src/data/games.json');
         allGames = await response.json();
         
-        setupCategories();
         renderGallery();
         setupEventListeners();
         
@@ -47,45 +46,15 @@ async function init() {
     }
 }
 
-function setupCategories() {
-    const cats = new Set(allGames.map(g => g.category));
-    const categories = ['All', ...Array.from(cats)];
-    
-    categoriesContainer.innerHTML = `
-        <i data-lucide="layers" class="w-4 h-4 text-gray-500 mr-2 flex-shrink-0"></i>
-    `;
-    
-    categories.forEach(cat => {
-        const btn = document.createElement('button');
-        btn.textContent = cat;
-        btn.className = `whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
-            currentCategory === cat 
-                ? 'bg-red-400 text-black shadow-[0_0_15px_rgba(248,113,113,0.4)]' 
-                : 'bg-[#1a0505] hover:border-gray-600 border border-transparent'
-        }`;
-        
-        btn.onclick = () => {
-            currentCategory = cat;
-            renderGallery();
-            setupCategories(); // Refresh active state
-            // Re-run lucide for the icon inside the container if we wiped it (we didn't but good practice)
-            lucide.createIcons();
-        };
-        
-        categoriesContainer.appendChild(btn);
-    });
-}
-
 function renderGallery() {
     const filtered = allGames.filter(game => {
         const matchesSearch = game.title.toLowerCase().includes(currentSearch.toLowerCase()) ||
                             game.description.toLowerCase().includes(currentSearch.toLowerCase());
-        const matchesCategory = currentCategory === 'All' || game.category === currentCategory;
-        return matchesSearch && matchesCategory;
+        return matchesSearch;
     });
 
     // Update Grid Title and Count
-    gridTitle.textContent = currentCategory === 'All' ? 'Latest Discoveries' : `${currentCategory} Collection`;
+    gridTitle.textContent = 'Latest Discoveries';
     gamesCount.textContent = `${filtered.length} Games`;
 
     // Hero Section visibility
@@ -198,7 +167,6 @@ function setupEventListeners() {
         currentCategory = 'All';
         searchInput.value = '';
         mobileSearchInput.value = '';
-        setupCategories();
         renderGallery();
     };
     

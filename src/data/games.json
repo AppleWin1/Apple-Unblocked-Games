@@ -6,5 +6,13 @@
     "url": "https://azgames.io/game/slope/",
     "category": "Arcade",
     "thumbnail": "https://sloperun2.io/data/image/game/slope-run.png"
+  },
+  {
+    "id": "geometry-dash",
+    "title": "Geometry Dash",
+    "description": "Jump and fly your way through danger in this rhythm-based action platformer! Prepare for a near impossible challenge in the world of Geometry Dash. Push your skills to the limit as you jump, fly and flip your way through dangerous passages and spiky obstacles.",
+    "url": "https://ozgames.io/geometry-dash.embed",
+    "category": "Arcade",
+    "thumbnail": "https://static.wikia.nocookie.net/b213ondiscord/images/a/a6/Geometrydash.png/revision/latest?cb=20200721125515"
   }
 ]
