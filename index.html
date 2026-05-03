@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Arcade: Unblocked Games</title>
+    <title>APPLE CODEX: Unblocked Games</title>
     <!-- Tailwind CC CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/src/index.css">
@@ -15,8 +15,8 @@
             --neon-pink: #ff00ff;
             --neon-blue: #00ffff;
             --neon-green: #39ff14;
-            --arcade-bg: #050510;
-            --arcade-card: #101025;
+            --arcade-bg: #0f0101;
+            --arcade-card: #1a0505;
         }
 
         body {
@@ -62,18 +62,18 @@
 </head>
 <body class="min-h-screen flex flex-col overflow-x-hidden antialiased">
     <!-- Header -->
-    <header class="sticky top-0 z-50 bg-[#050510]/80 backdrop-blur-md border-b border-[#101025] p-4">
+    <header class="sticky top-0 z-50 bg-[#0f0101]/80 backdrop-blur-md border-b border-[#1a0505] p-4">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div id="app-logo" class="flex items-center gap-3 cursor-pointer group">
-                <div class="p-2 bg-cyan-400/10 rounded-lg group-hover:bg-fuchsia-500/10 transition-colors">
-                    <i data-lucide="gamepad-2" class="w-8 h-8 text-cyan-400 group-hover:text-fuchsia-500 transition-colors"></i>
+                <div class="p-2 bg-red-400/10 rounded-lg group-hover:bg-red-400/20 transition-colors border border-red-400/20">
+                    <i data-lucide="apple" class="w-8 h-8 text-red-400"></i>
                 </div>
-                <h1 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent uppercase">
-                    NEON ARCADE
+                <h1 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent uppercase">
+                    APPLE CODEX
                 </h1>
             </div>
 
-            <div id="header-search-container" class="hidden md:flex items-center bg-[#101025] border border-gray-800 rounded-full px-4 py-2 w-full max-w-md ml-8">
+            <div id="header-search-container" class="hidden md:flex items-center bg-[#1a0505] border border-gray-800 rounded-full px-4 py-2 w-full max-w-md ml-8">
                 <i data-lucide="search" class="w-5 h-5 text-gray-500 mr-2"></i>
                 <input 
                     type="text" 
@@ -84,11 +84,11 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <button id="back-to-gallery-btn" class="hidden flex items-center gap-2 px-4 py-2 rounded-full border border-gray-700 hover:border-cyan-400 hover:text-cyan-400 transition-all">
+                <button id="back-to-gallery-btn" class="hidden flex items-center gap-2 px-4 py-2 rounded-full border border-gray-700 hover:border-red-400 hover:text-red-400 transition-all">
                     <i data-lucide="arrow-left" class="w-4 h-4"></i>
                     <span>Gallery</span>
                 </button>
-                <div class="w-10 h-10 rounded-full bg-[#101025] border border-gray-800 flex items-center justify-center">
+                <div class="w-10 h-10 rounded-full bg-[#1a0505] border border-gray-800 flex items-center justify-center">
                     <span class="text-[10px] font-mono text-gray-400">V.2</span>
                 </div>
             </div>
@@ -100,7 +100,7 @@
         <div id="gallery-view" class="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <!-- Mobile Search -->
             <div class="md:hidden">
-                <div class="flex items-center bg-[#101025] border border-gray-800 rounded-xl px-4 py-3">
+                <div class="flex items-center bg-[#1a0505] border border-gray-800 rounded-xl px-4 py-3">
                     <i data-lucide="search" class="w-5 h-5 text-gray-500 mr-2"></i>
                     <input 
                         type="text" 
@@ -120,12 +120,12 @@
             <!-- Hero Section -->
             <div id="hero-section" class="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden group cursor-pointer border border-gray-800">
                 <img id="hero-image" src="" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#050510] via-[#050510]/40 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0f0101] via-[#0f0101]/40 to-transparent"></div>
                 <div class="absolute bottom-0 left-0 p-8 space-y-2">
-                    <span class="px-3 py-1 bg-fuchsia-600 text-white text-[10px] font-bold uppercase rounded-full tracking-wider">Featured Release</span>
+                    <span class="px-3 py-1 bg-red-500 text-white text-[10px] font-bold uppercase rounded-full tracking-wider">Featured Release</span>
                     <h2 id="hero-title" class="text-4xl md:text-6xl font-bold">Featured Game</h2>
                     <p id="hero-description" class="text-gray-300 max-w-xl line-clamp-2">Game description goes here.</p>
-                    <button class="mt-4 flex items-center gap-2 bg-white text-black px-6 py-3 rounded-xl font-bold hover:bg-cyan-400 transition-colors">
+                    <button class="mt-4 flex items-center gap-2 bg-white text-black px-6 py-3 rounded-xl font-bold hover:bg-red-400 hover:text-black transition-colors">
                         <i data-lucide="gamepad" class="w-5 h-5"></i>
                         Play Now
                     </button>
@@ -136,7 +136,7 @@
             <div class="space-y-4">
                 <div class="flex items-center justify-between">
                     <h3 class="text-xl font-bold flex items-center gap-2">
-                        <i data-lucide="gamepad" class="w-5 h-5 text-fuchsia-500"></i>
+                        <i data-lucide="gamepad" class="w-5 h-5 text-red-400"></i>
                         <span id="grid-title">Latest Discoveries</span>
                     </h3>
                     <span id="games-count" class="text-sm text-gray-500 font-mono">0 Games</span>
@@ -147,12 +147,12 @@
                 </div>
 
                 <div id="no-results" class="hidden py-20 text-center space-y-4">
-                    <div class="w-20 h-20 bg-[#101025] rounded-full flex items-center justify-center mx-auto border border-dashed border-gray-700">
+                    <div class="w-20 h-20 bg-[#1a0505] rounded-full flex items-center justify-center mx-auto border border-dashed border-gray-700">
                         <i data-lucide="search" class="w-8 h-8 text-gray-600"></i>
                     </div>
                     <div>
                         <p class="text-gray-400">No games found matching your search.</p>
-                        <button id="reset-filters" class="text-cyan-400 hover:underline text-sm font-medium mt-2">
+                        <button id="reset-filters" class="text-red-400 hover:underline text-sm font-medium mt-2">
                             Reset filters
                         </button>
                     </div>
@@ -165,13 +165,13 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div class="space-y-2">
                     <div class="flex items-center gap-3">
-                        <button id="player-back-btn" class="p-2 hover:bg-[#101025] rounded-lg transition-colors border border-gray-800">
+                        <button id="player-back-btn" class="p-2 hover:bg-[#1a0505] rounded-lg transition-colors border border-gray-800">
                             <i data-lucide="arrow-left" class="w-5 h-5"></i>
                         </button>
                         <h2 id="player-game-title" class="text-3xl md:text-4xl font-bold">Game Title</h2>
                     </div>
                     <div class="flex items-center gap-4 text-xs text-gray-400 font-mono uppercase tracking-widest pl-12">
-                        <span id="player-game-category" class="text-cyan-400">CATEGORY</span>
+                        <span id="player-game-category" class="text-red-400">CATEGORY</span>
                         <span>•</span>
                         <span>HD PLAYBACK</span>
                         <span>•</span>
@@ -179,7 +179,7 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-2">
-                    <button class="flex items-center gap-2 px-4 py-2 bg-[#101025] border border-gray-800 rounded-xl hover:border-gray-600 transition-all text-sm">
+                    <button class="flex items-center gap-2 px-4 py-2 bg-[#1a0505] border border-gray-800 rounded-xl hover:border-gray-600 transition-all text-sm">
                         <i data-lucide="x" class="w-4 h-4"></i>
                         <span>Report Issues</span>
                     </button>
@@ -190,68 +190,31 @@
             <div class="relative w-full aspect-video md:h-[70vh] md:aspect-auto bg-black rounded-3xl overflow-hidden border border-gray-800 shadow-2xl neon-border-blue">
                 <iframe id="game-iframe" src="" class="w-full h-full border-none" allow="autoplay; fullscreen; pointer-lock"></iframe>
                 <div class="absolute top-4 right-4 flex gap-2">
-                    <button id="fullscreen-btn" class="p-3 bg-black/60 backdrop-blur-md rounded-full hover:bg-cyan-400 hover:text-[#050510] transition-all">
+                    <button id="fullscreen-btn" class="p-3 bg-black/60 backdrop-blur-md rounded-full hover:bg-red-400 hover:text-black transition-all">
                         <i data-lucide="maximize-2" class="w-5 h-5"></i>
                     </button>
                 </div>
             </div>
 
-            <!-- Info Grid -->
-            <div class="grid md:grid-cols-[1fr_300px] gap-8">
-                <div class="space-y-6">
-                    <div class="p-6 bg-[#101025] rounded-3xl border border-gray-800 space-y-4">
-                        <h3 class="text-xl font-bold underline decoration-fuchsia-500 decoration-2 underline-offset-8">About the Game</h3>
-                        <p id="player-game-description" class="text-gray-300 leading-relaxed"></p>
-                        <div class="flex flex-wrap gap-2 pt-4">
-                            <span class="px-3 py-1 bg-gray-800/50 rounded-lg text-[10px] font-mono text-gray-400 uppercase">#unblocked</span>
-                            <span class="px-3 py-1 bg-gray-800/50 rounded-lg text-[10px] font-mono text-gray-400 uppercase">#arcade</span>
-                            <span class="px-3 py-1 bg-gray-800/50 rounded-lg text-[10px] font-mono text-gray-400 uppercase">#webgame</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="space-y-6">
-                    <div class="p-6 bg-[#101025] rounded-3xl border border-gray-800 space-y-4">
-                        <h4 class="font-bold">Recommended</h4>
-                        <div id="recommendations-container" class="space-y-4">
-                            <!-- Recs will be injected -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="mt-20 border-t border-[#101025] py-12 px-4">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div class="col-span-1 md:col-span-2 space-y-4">
+    <footer class="mt-20 border-t border-[#1a0505] py-12 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-4">
                 <div class="flex items-center gap-2">
-                    <i data-lucide="gamepad-2" class="w-6 h-6 text-cyan-400"></i>
-                    <span class="text-xl font-bold tracking-tight text-white uppercase">NEON ARCADE</span>
+                    <i data-lucide="apple" class="w-6 h-6 text-red-400"></i>
+                    <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent uppercase">APPLE CODEX</span>
                 </div>
                 <p class="text-sm text-gray-500 max-w-sm">
                     The ultimate destination for unblocked entertainment. High-performance gaming, zero trackers, 100% free forever.
                 </p>
             </div>
-            <div class="space-y-4">
-                <h5 class="font-bold text-sm tracking-widest uppercase text-gray-400">Navigation</h5>
-                <ul class="space-y-2 text-sm text-gray-500">
-                    <li><a href="#" class="hover:text-cyan-400 transition-colors">Browse Games</a></li>
-                    <li><a href="#" class="hover:text-cyan-400 transition-colors">Categories</a></li>
-                    <li><a href="#" class="hover:text-cyan-400 transition-colors">Report Bug</a></li>
-                </ul>
-            </div>
-            <div class="space-y-4">
-                <h5 class="font-bold text-sm tracking-widest uppercase text-gray-400">System Status</h5>
-                <div class="flex items-center gap-2 text-xs font-mono text-[#39ff14]">
-                    <div class="w-2 h-2 bg-[#39ff14] rounded-full animate-pulse"></div>
-                    SERVER ONLINE [US-GATEWAY]
-                </div>
-                <p class="text-[10px] text-gray-600 font-mono">ENCRYPTED CONNECTION SECURE</p>
-            </div>
         </div>
         <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-[10px] text-gray-600 font-mono uppercase tracking-widest">© 2026 NEON ARCADE CORE • NO RIGHTS RESERVED</p>
+            <p class="text-[10px] text-gray-600 font-mono uppercase tracking-widest">™ 2026 APPLE CODEX - ALL RIGHTS RESERVED</p>
             <div class="flex items-center gap-6">
                 <button class="text-[10px] text-gray-600 font-mono hover:text-white transition-colors">PRIVACY_POLICY</button>
                 <button class="text-[10px] text-gray-600 font-mono hover:text-white transition-colors">TERMS_OF_ENGAGEMENT</button>

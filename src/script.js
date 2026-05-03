@@ -60,8 +60,8 @@ function setupCategories() {
         btn.textContent = cat;
         btn.className = `whitespace-nowrap px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
             currentCategory === cat 
-                ? 'bg-cyan-400 text-[#050510] shadow-[0_0_15px_rgba(0,255,255,0.4)]' 
-                : 'bg-[#101025] hover:border-gray-600 border border-transparent'
+                ? 'bg-red-400 text-black shadow-[0_0_15px_rgba(248,113,113,0.4)]' 
+                : 'bg-[#1a0505] hover:border-gray-600 border border-transparent'
         }`;
         
         btn.onclick = () => {
@@ -108,24 +108,24 @@ function renderGallery() {
         noResults.classList.add('hidden-view');
         filtered.forEach((game, index) => {
             const card = document.createElement('div');
-            card.className = "group flex flex-col bg-[#101025] rounded-2xl border border-gray-800 overflow-hidden hover:border-cyan-400/50 hover:bg-[#101025]/80 transition-all cursor-pointer animate-in fade-in zoom-in-95 duration-300";
+            card.className = "group flex flex-col bg-[#1a0505] rounded-2xl border border-gray-800 overflow-hidden hover:border-red-400/50 hover:bg-[#1a0505]/80 transition-all cursor-pointer animate-in fade-in zoom-in-95 duration-300";
             card.style.animationDelay = `${index * 50}ms`;
             
             card.innerHTML = `
                 <div class="relative aspect-video overflow-hidden">
                     <img src="${game.thumbnail}" alt="${game.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                    <div class="absolute top-2 right-2 px-2 py-1 bg-[#050510]/80 backdrop-blur-sm rounded text-[10px] font-mono border border-gray-700">
+                    <div class="absolute top-2 right-2 px-2 py-1 bg-[#0f0101]/80 backdrop-blur-sm rounded text-[10px] font-mono border border-gray-700">
                         ${game.category}
                     </div>
                     <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <div class="w-12 h-12 rounded-full bg-cyan-400 flex items-center justify-center text-[#050510] shadow-[0_0_15px_rgba(0,255,255,0.4)] scale-75 group-hover:scale-100 transition-transform">
+                        <div class="w-12 h-12 rounded-full bg-red-400 flex items-center justify-center text-black shadow-[0_0_15px_rgba(248,113,113,0.4)] scale-75 group-hover:scale-100 transition-transform">
                             <i data-lucide="maximize-2" class="w-6 h-6"></i>
                         </div>
                     </div>
                 </div>
                 <div class="p-4 space-y-2">
-                    <h4 class="text-lg group-hover:text-cyan-400 transition-colors font-bold">${game.title}</h4>
+                    <h4 class="text-lg group-hover:text-red-400 transition-colors font-bold">${game.title}</h4>
                     <p class="text-xs text-gray-400 line-clamp-2 leading-relaxed">${game.description}</p>
                 </div>
             `;
@@ -146,24 +146,26 @@ function playGame(game) {
     gameIframe.src = game.url;
     playerGameTitle.textContent = game.title;
     playerGameCategory.textContent = game.category;
-    playerGameDescription.textContent = game.description;
+    if (playerGameDescription) playerGameDescription.textContent = game.description;
     
     // Recommendations
-    const recs = allGames.filter(g => g.id !== game.id).slice(0, 3);
-    recommendationsContainer.innerHTML = '';
-    recs.forEach(rec => {
-        const div = document.createElement('div');
-        div.className = "flex gap-3 group cursor-pointer";
-        div.innerHTML = `
-            <img src="${rec.thumbnail}" class="w-20 h-14 object-cover rounded-lg border border-gray-800 group-hover:border-fuchsia-500 transition-all">
-            <div class="min-w-0">
-                <p class="text-sm font-medium truncate group-hover:text-fuchsia-500 transition-colors">${rec.title}</p>
-                <p class="text-[10px] text-gray-500 uppercase">${rec.category}</p>
-            </div>
-        `;
-        div.onclick = () => playGame(rec);
-        recommendationsContainer.appendChild(div);
-    });
+    if (recommendationsContainer) {
+        const recs = allGames.filter(g => g.id !== game.id).slice(0, 3);
+        recommendationsContainer.innerHTML = '';
+        recs.forEach(rec => {
+            const div = document.createElement('div');
+            div.className = "flex gap-3 group cursor-pointer";
+            div.innerHTML = `
+                <img src="${rec.thumbnail}" class="w-20 h-14 object-cover rounded-lg border border-gray-800 group-hover:border-fuchsia-500 transition-all">
+                <div class="min-w-0">
+                    <p class="text-sm font-medium truncate group-hover:text-fuchsia-500 transition-colors">${rec.title}</p>
+                    <p class="text-[10px] text-gray-500 uppercase">${rec.category}</p>
+                </div>
+            `;
+            div.onclick = () => playGame(rec);
+            recommendationsContainer.appendChild(div);
+        });
+    }
     
     window.scrollTo({ top: 0, behavior: 'smooth' });
     lucide.createIcons();
