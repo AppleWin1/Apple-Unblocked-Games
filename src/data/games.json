@@ -1,0 +1,58 @@
+[
+  {
+    "id": "2048",
+    "title": "2048",
+    "description": "Join the numbers and get to the 2048 tile!",
+    "url": "https://play2048.co/",
+    "category": "Puzzle",
+    "thumbnail": "https://images.unsplash.com/photo-1614030424754-24d1fbf48624?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    "id": "hextris",
+    "title": "Hextris",
+    "description": "Fast-paced hexagonal puzzle game inspired by Tetris.",
+    "url": "https://hextris.io/",
+    "category": "Arcade",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    "id": "clumsy-bird",
+    "title": "Clumsy Bird",
+    "description": "A Flappy Bird clone. How far can you fly?",
+    "url": "https://ellisonleao.github.io/clumsy-bird/",
+    "category": "Action",
+    "thumbnail": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    "id": "snake",
+    "title": "Google Snake",
+    "description": "The classic snake game we all love.",
+    "url": "https://www.google.com/logos/2010/pacman10-i.html",
+    "category": "Classic",
+    "thumbnail": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    "id": "tower-game",
+    "title": "Tower Building",
+    "description": "Stack the blocks as high as you can.",
+    "url": "https://v6p9d9t4.ssl.hwcdn.net/html/1458269/index.html",
+    "category": "Action",
+    "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    "id": "pacman",
+    "title": "Pacman",
+    "description": "Classic Pacman experience.",
+    "url": "https://macek.github.io/google_pacman/",
+    "category": "Classic",
+    "thumbnail": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    "id": "paper-io-2",
+    "title": "Paper.io 2",
+    "description": "Capture as much territory as possible.",
+    "url": "https://paper-io.com/",
+    "category": "IO Games",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=200&h=200&auto=format&fit=crop"
+  }
+]

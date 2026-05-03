@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-neon-pink: #ff00ff;
+  --color-neon-blue: #00ffff;
+  --color-neon-green: #39ff14;
+  --color-arcade-bg: #050510;
+  --color-arcade-card: #101025;
+}
+
+@layer base {
+  body {
+    @apply bg-arcade-bg text-gray-100 font-sans tracking-tight;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+.neon-glow-pink {
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+}
+
+.neon-glow-blue {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.neon-border-pink {
+  border: 1px solid rgba(255, 0, 255, 0.6);
+}
+
+.neon-border-blue {
+  border: 1px solid rgba(0, 255, 255, 0.6);
+}
+
+.arcade-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-arcade-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-arcade-card rounded-full;
+  border: 2px solid theme('colors.neon-blue');
+}
+
