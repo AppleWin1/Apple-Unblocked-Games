@@ -10,6 +10,18 @@ export default defineConfig(({mode}) => {
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
+    esbuild: {
+      loader: "jsx",
+      include: /src\/.*\.js$/,
+      exclude: [],
+    },
+    optimizeDeps: {
+      esbuildOptions: {
+        loader: {
+          ".js": "jsx",
+        },
+      },
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
