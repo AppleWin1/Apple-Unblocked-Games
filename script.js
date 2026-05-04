@@ -42,6 +42,7 @@ async function init() {
         allGames = await response.json();
         
         setupTabs();
+        setupSettingsTabs();
         renderGallery();
         setupEventListeners();
         
@@ -237,6 +238,56 @@ function showSettings() {
     settingsView.classList.remove('hidden-view');
     backBtn.classList.remove('hidden-view');
     gameIframe.src = '';
+}
+
+function setupSettingsTabs() {
+    const tabLooks = document.getElementById('settings-tab-looks');
+    const tabCopyright = document.getElementById('settings-tab-copyright');
+    const tabCloak = document.getElementById('settings-tab-cloak');
+    const settingsTabs = [tabLooks, tabCopyright, tabCloak];
+    const settingsContent = document.getElementById('settings-content');
+
+    const copyrightBinary = `01010011 01101100 01101111 01110000 01100101 00101101 00100000 01110011 01101100 01101111 01110000 01100101 01110010 01110101 01101110 00110010 00101110 01101001 01101111 <br><br> 01000111 01100101 01101111 01101101 01100101 01110100 01110010 01111001 00100000 01000100 01100001 01110011 01101000 00101101 00100000 01100111 01100101 01101111 01101101 01100101 01110100 01110010 01111001 01101100 01101001 01110100 01100101 01110000 01100011 00101110 01101001 01101111 <br><br> 01010011 01110100 01101001 01100011 01101011 01101101 01100001 01101110 00100000 01001000 01101111 01101111 01101011 00101101 00100000 01100111 01100101 01101111 01101101 01100101 01110100 01110010 01111001 01101100 01101001 01110100 01100101 01110000 01100011 00101110 01101001 01101111 <br><br> 01000101 01110011 01100011 01100001 01110000 01100101 00100000 01010010 01101111 01100001 01100100 00101101 00100000 01100111 01100101 01101111 01101101 01100101 01110100 01110010 01111001 01101100 01101001 01110100 01100101 01110000 01100011 00101110 01101001 01101111 <br><br> 01000101 01110011 01100011 01100001 01110000 01100101 00100000 01010010 01101111 01100001 01100100 00100000 00110010 00101101 00100000 01100111 01100101 01101111 01101101 01100101 01110100 01110010 01111001 01101100 01101001 01110100 01100101 01110000 01100011 00101110 01101001 01101111 <br><br> 01000101 01110011 01100011 01100001 01110000 01100101 00100000 01010010 01101111 01100001 01100100 00100000 00110011 00101101 00100000 01100111 01100101 01101111 01101101 01100101 01110100 01110010 01111001 01101100 01101001 01110100 01100101 01110000 01100011 00101110 01101001 01101111 <br><br> 01000101 01110011 01100011 01100001 01110000 01100101 00100000 01010010 01101111 01100001 01100100 00100000 01000011 01101001 01110100 01111001 00100000 00110010 00101101 00100000 01100111 01100101 01101111 01101101 01100101 01110100 01110010 01111001 01101100 01101001 01110100 01100101 01110000 01100011 00101110 01101001 01101111`;
+
+    settingsTabs.forEach(tab => {
+        tab.onclick = () => {
+            // Update active state
+            settingsTabs.forEach(t => {
+                t.classList.remove('text-white');
+                t.classList.add('text-gray-500');
+            });
+            tab.classList.remove('text-gray-500');
+            tab.classList.add('text-white');
+
+            if (tab.id === 'settings-tab-copyright') {
+                settingsContent.innerHTML = `
+                    <div class="p-8 w-full max-w-4xl text-left bg-black/20 rounded-2xl border border-white/5 animate-in slide-in-from-bottom-2 duration-300">
+                        <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-red-500 mb-6 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                            System Authentication Registry
+                        </h4>
+                        <div class="font-mono text-[10px] leading-relaxed text-gray-500 break-words whitespace-pre-wrap">
+                            ${copyrightBinary}
+                        </div>
+                    </div>
+                `;
+            } else {
+                // Clear content for others
+                settingsContent.innerHTML = `
+                    <div class="flex flex-col items-center gap-4 text-center">
+                        <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center border border-white/10">
+                            <i data-lucide="settings" class="w-8 h-8 text-gray-700"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold uppercase tracking-widest text-gray-400">${tab.textContent.trim()}</h4>
+                            <p class="text-sm text-gray-600 font-mono mt-2 uppercase tracking-wider">Interface pending configuration</p>
+                        </div>
+                    </div>
+                `;
+            }
+            lucide.createIcons();
+        };
+    });
 }
 
 function setupEventListeners() {

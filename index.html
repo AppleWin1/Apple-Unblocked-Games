@@ -205,8 +205,22 @@
         </div>
 
         <!-- Settings View -->
-        <div id="settings-view" class="hidden-view w-full min-h-[60vh] animate-in fade-in duration-500">
-            <!-- Blank screen as requested -->
+        <div id="settings-view" class="hidden-view w-full min-h-[60vh] animate-in fade-in duration-500 space-y-8">
+            <div class="flex flex-wrap items-center gap-4 border-b border-[#1a0505] pb-4">
+                <button id="settings-tab-looks" class="px-6 py-2 bg-[#1a0505] border border-gray-800 rounded-lg hover:border-red-400 hover:text-red-400 transition-all text-xs font-bold uppercase tracking-widest text-white">
+                    Looks
+                </button>
+                <button id="settings-tab-copyright" class="px-6 py-2 bg-[#1a0505] border border-gray-800 rounded-lg hover:border-red-400 hover:text-red-400 transition-all text-xs font-bold uppercase tracking-widest text-gray-500">
+                    Copyright
+                </button>
+                <button id="settings-tab-cloak" class="px-6 py-2 bg-[#1a0505] border border-gray-800 rounded-lg hover:border-red-400 hover:text-red-400 transition-all text-xs font-bold uppercase tracking-widest text-gray-500">
+                    Cloak
+                </button>
+            </div>
+            
+            <div id="settings-content" class="min-h-[40vh] flex items-center justify-center border border-dashed border-gray-800 rounded-3xl">
+                <p class="text-gray-600 font-mono uppercase tracking-[0.2em] animate-pulse">Select a category to begin customization</p>
+            </div>
         </div>
     </main>
 
