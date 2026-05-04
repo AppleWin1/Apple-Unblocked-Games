@@ -54,5 +54,69 @@
     "url": "https://games.ofree.io/escape-road-3/game.html",
     "category": "Driving",
     "thumbnail": "https://azgames.io/upload/imgs/escaperoad3.png"
+  },
+  {
+    "id": "escape-road-city-2",
+    "title": "Escape Road City 2",
+    "description": "Escape the city at all costs! In this high-stakes sequel, navigate through denser traffic, dodge police roadblocks, and find your way to freedom in a sprawling urban environment.",
+    "url": "https://1games.io/game/escape-road-city-2/",
+    "category": "Driving",
+    "thumbnail": "https://topgames.gg/data/image/game/escape-road-city-2.png"
+  },
+  {
+    "id": "retro-bowl",
+    "title": "Retro Bowl",
+    "description": "The ultimate retro-style American football game. Manage your team, call the plays, and lead your squad to championship glory in this addictive sports challenge.",
+    "url": "https://freegamesunblocked76.github.io/retro-bowl/",
+    "category": "Sports",
+    "thumbnail": "https://topgames.gg/data/image/game/retro-bowl.png"
+  },
+  {
+    "id": "stickman-hook",
+    "title": "Stickman Hook",
+    "description": "Swing like a spider in this fun physics-based platformer! Tap to hook and make incredible jumps. Can you finish all the levels with grace?",
+    "url": "https://topgames.gg/game/stickman-hook/",
+    "category": "Obby",
+    "thumbnail": "https://play-lh.googleusercontent.com/z2Lh3JM1f7U4TjzXIqd5e5Hp6lEINRmVrM_6LajcpClzXW7SthS7Lo97CQIiwybtQw=w526-h296-rw"
+  },
+  {
+    "id": "baseball-bros",
+    "title": "Baseball Bros",
+    "description": "Step up to the plate in this fast-paced multiplayer baseball game! Hit home runs, make amazing catches, and compete against players worldwide in a fun, arcade-style experience.",
+    "url": "https://nealfun.app/game/baseball-bros/",
+    "category": "Bros",
+    "thumbnail": "https://zapgames.io/data/image/game/baseball-bros.jpg"
+  },
+  {
+    "id": "football-bros",
+    "title": "Football Bros",
+    "description": "Experience the excitement of American football in this fast-paced sports game! Lead your team to victory with strategic plays and powerful touchdowns.",
+    "url": "https://footballbros.io/",
+    "category": "Bros",
+    "thumbnail": "https://topgames.gg/data/image/game/football-bros.png"
+  },
+  {
+    "id": "soccer-bros",
+    "title": "Soccer Bros",
+    "description": "The ultimate online soccer experience! Dash, tackle, and score spectacular goals in this fast-paced multiplayer soccer game. Join the bros and dominate the field!",
+    "url": "https://soccerbros.gg",
+    "category": "Bros",
+    "thumbnail": "https://imgs.crazygames.com/soccer-bros_16x9/20240109055124/soccer-bros_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop"
+  },
+  {
+    "id": "basket-bros",
+    "title": "Basket Bros",
+    "description": "High-flying basketball action! Slam dunk on your opponents in this fast-paced multiplayer basketball game. Customize your player and dominate the court!",
+    "url": "https://basketbros.io/cg?czyExpNexx360UserSync_CZY_18427=ineligible&isNewUser=false&skipPrerollFirstSession=true",
+    "category": "Bros",
+    "thumbnail": "https://imgs.crazygames.com/basketbros_16x9/20251107022434/basketbros_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop"
+  },
+  {
+    "id": "wrestle-bros",
+    "title": "Wrestle Bros",
+    "description": "Jump into the ring and pin your opponents in this wild multiplayer wrestling game! Perform crazy moves, slam your rivals, and become the wrestling champion.",
+    "url": "https://wrestlebros.io/?cg=1&czyExpNexx360UserSync_CZY_18427=ineligible&isNewUser=false",
+    "category": "Bros",
+    "thumbnail": "https://imgs.crazygames.com/wrestle-bros_16x9/20250320082313/wrestle-bros_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop"
   }
 ]

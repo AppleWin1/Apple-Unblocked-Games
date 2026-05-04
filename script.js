@@ -55,7 +55,9 @@ function setupTabs() {
     const tabEpstein = document.getElementById('tab-epstein');
     const tabObby = document.getElementById('tab-obby');
     const tabEscapeRoad = document.getElementById('tab-escape-road');
-    const tabs = [tabAll, tabEpstein, tabObby, tabEscapeRoad];
+    const tabSports = document.getElementById('tab-sports');
+    const tabBros = document.getElementById('tab-bros');
+    const tabs = [tabAll, tabEpstein, tabObby, tabEscapeRoad, tabSports, tabBros];
 
     tabs.forEach(tab => {
         tab.onclick = () => {
@@ -72,6 +74,8 @@ function setupTabs() {
             else if (tab.id === 'tab-epstein') currentCategory = 'Epstein';
             else if (tab.id === 'tab-obby') currentCategory = 'Obby';
             else if (tab.id === 'tab-escape-road') currentCategory = 'Escape Road';
+            else if (tab.id === 'tab-sports') currentCategory = 'Sports';
+            else if (tab.id === 'tab-bros') currentCategory = 'Bros';
             renderGallery();
         };
     });
@@ -92,8 +96,10 @@ function renderGallery() {
         if (currentCategory === 'Obby') {
             const matchesObby = game.id === 'slope' || 
                                 game.id === 'geometry-dash' || 
+                                game.id === 'stickman-hook' || 
                                 game.title.toLowerCase().includes('slope') || 
-                                game.title.toLowerCase().includes('geometry dash');
+                                game.title.toLowerCase().includes('geometry dash') ||
+                                game.title.toLowerCase().includes('stickman hook');
             return matchesSearch && matchesObby;
         }
 
@@ -101,6 +107,17 @@ function renderGallery() {
             const matchesEscapeRoad = game.id.includes('escape-road') || 
                                       game.title.toLowerCase().includes('escape road');
             return matchesSearch && matchesEscapeRoad;
+        }
+
+        if (currentCategory === 'Sports') {
+            return matchesSearch && game.category === 'Sports';
+        }
+
+        if (currentCategory === 'Bros') {
+            const matchesBros = game.category === 'Bros' ||
+                               game.id.includes('bros') || 
+                               game.title.toLowerCase().includes('bros');
+            return matchesSearch && matchesBros;
         }
 
         return matchesSearch;
