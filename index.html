@@ -88,9 +88,9 @@
                     <i data-lucide="arrow-left" class="w-4 h-4"></i>
                     <span>Gallery</span>
                 </button>
-                <div class="w-10 h-10 rounded-full bg-[#1a0505] border border-gray-800 flex items-center justify-center">
-                    <span class="text-[10px] font-mono text-gray-400">V.2</span>
-                </div>
+                <button id="settings-btn" class="px-4 py-2 bg-[#1a0505] border border-gray-800 rounded-lg hover:border-red-400 hover:text-red-400 transition-all text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                    Settings
+                </button>
             </div>
         </div>
     </header>
@@ -118,6 +118,7 @@
                  <button id="tab-escape-road" class="tab-btn px-6 py-2 text-sm font-bold uppercase tracking-widest border-b-2 border-transparent text-gray-500 hover:text-white transition-all">Escape Road</button>
                  <button id="tab-sports" class="tab-btn px-6 py-2 text-sm font-bold uppercase tracking-widest border-b-2 border-transparent text-gray-500 hover:text-white transition-all">Sports</button>
                  <button id="tab-bros" class="tab-btn px-6 py-2 text-sm font-bold uppercase tracking-widest border-b-2 border-transparent text-gray-500 hover:text-white transition-all">Bros</button>
+                 <button id="tab-water" class="tab-btn px-6 py-2 text-sm font-bold uppercase tracking-widest border-b-2 border-transparent text-gray-500 hover:text-white transition-all">Water</button>
                  <button id="tab-epstein" class="tab-btn px-6 py-2 text-sm font-bold uppercase tracking-widest border-b-2 border-transparent text-gray-500 hover:text-white transition-all">Epstein</button>
             </div>
 
@@ -201,6 +202,11 @@
             </div>
 
 
+        </div>
+
+        <!-- Settings View -->
+        <div id="settings-view" class="hidden-view w-full min-h-[60vh] animate-in fade-in duration-500">
+            <!-- Blank screen as requested -->
         </div>
     </main>
 

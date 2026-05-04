@@ -10,6 +10,7 @@ let currentSearch = '';
 // DOM Elements
 const galleryView = document.getElementById('gallery-view');
 const playerView = document.getElementById('player-view');
+const settingsView = document.getElementById('settings-view');
 const gamesGrid = document.getElementById('games-grid');
 const categoriesContainer = document.getElementById('categories-container');
 const heroSection = document.getElementById('hero-section');
@@ -22,6 +23,7 @@ const mobileSearchInput = document.getElementById('mobile-search-input');
 
 const backBtn = document.getElementById('back-to-gallery-btn');
 const playerBackBtn = document.getElementById('player-back-btn');
+const settingsBtn = document.getElementById('settings-btn');
 const appLogo = document.getElementById('app-logo');
 
 const gameIframe = document.getElementById('game-iframe');
@@ -57,7 +59,8 @@ function setupTabs() {
     const tabEscapeRoad = document.getElementById('tab-escape-road');
     const tabSports = document.getElementById('tab-sports');
     const tabBros = document.getElementById('tab-bros');
-    const tabs = [tabAll, tabEpstein, tabObby, tabEscapeRoad, tabSports, tabBros];
+    const tabWater = document.getElementById('tab-water');
+    const tabs = [tabAll, tabEpstein, tabObby, tabEscapeRoad, tabSports, tabBros, tabWater];
 
     tabs.forEach(tab => {
         tab.onclick = () => {
@@ -76,6 +79,7 @@ function setupTabs() {
             else if (tab.id === 'tab-escape-road') currentCategory = 'Escape Road';
             else if (tab.id === 'tab-sports') currentCategory = 'Sports';
             else if (tab.id === 'tab-bros') currentCategory = 'Bros';
+            else if (tab.id === 'tab-water') currentCategory = 'Water';
             renderGallery();
         };
     });
@@ -118,6 +122,13 @@ function renderGallery() {
                                game.id.includes('bros') || 
                                game.title.toLowerCase().includes('bros');
             return matchesSearch && matchesBros;
+        }
+
+        if (currentCategory === 'Water') {
+            const matchesWater = game.category === 'Water' ||
+                                game.id.includes('water') || 
+                                game.title.toLowerCase().includes('water');
+            return matchesSearch && matchesWater;
         }
 
         return matchesSearch;
@@ -215,8 +226,17 @@ function playGame(game) {
 function showGallery() {
     galleryView.classList.remove('hidden-view');
     playerView.classList.add('hidden-view');
+    settingsView.classList.add('hidden-view');
     backBtn.classList.add('hidden-view');
     gameIframe.src = ''; // Stop game when leaving
+}
+
+function showSettings() {
+    galleryView.classList.add('hidden-view');
+    playerView.classList.add('hidden-view');
+    settingsView.classList.remove('hidden-view');
+    backBtn.classList.remove('hidden-view');
+    gameIframe.src = '';
 }
 
 function setupEventListeners() {
@@ -233,6 +253,7 @@ function setupEventListeners() {
     backBtn.onclick = showGallery;
     playerBackBtn.onclick = showGallery;
     appLogo.onclick = showGallery;
+    settingsBtn.onclick = showSettings;
     
     document.getElementById('reset-filters').onclick = () => {
         currentSearch = '';

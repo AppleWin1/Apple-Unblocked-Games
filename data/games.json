@@ -118,5 +118,29 @@
     "url": "https://wrestlebros.io/?cg=1&czyExpNexx360UserSync_CZY_18427=ineligible&isNewUser=false",
     "category": "Bros",
     "thumbnail": "https://imgs.crazygames.com/wrestle-bros_16x9/20250320082313/wrestle-bros_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop"
+  },
+  {
+    "id": "stabfish-io",
+    "title": "Stabfish.io",
+    "description": "Deceptively simple, yet incredibly addictive! Play as a deadly sea creature and stab your way to the top of the food chain in this brutal multiplayer arena.",
+    "url": "https://stabfish-io.game-files.crazygames.com/stabfish-io/135/index.html?czyExpNexx360UserSync_CZY_18427=ineligible&isNewUser=false",
+    "category": "Water",
+    "thumbnail": "https://stabfish.io/images/cover.png"
+  },
+  {
+    "id": "stabfish-2",
+    "title": "Stabfish 2",
+    "description": "The evolution of underwater combat! Stabfish 2 brings new mechanics, physics-based swordfighting, and an even more intense multiplayer battle for ocean supremacy.",
+    "url": "https://stabfish2.io/?czyExpNexx360UserSync_CZY_18427=ineligible&isNewUser=false#/?p=czg",
+    "category": "Water",
+    "thumbnail": "https://imgs.crazygames.com/stabfish2-io-multiplayer_16x9/20250108041122/stabfish2-io-multiplayer_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop"
+  },
+  {
+    "id": "tiny-fishing",
+    "title": "Tiny Fishing",
+    "description": "Cast your line and reel in the big ones in this addictive fishing game! Upgrade your gear, discover rare species, and see how deep you can go in the world of Tiny Fishing.",
+    "url": "https://tiny-fishing.game-files.crazygames.com/tiny-fishing/7/index.html?czyExpNexx360UserSync_CZY_18427=ineligible&isNewUser=false",
+    "category": "Water",
+    "thumbnail": "https://imgs.crazygames.com/games/tiny-fishing/cover_1x1-1707829871792.png?format=auto&quality=70&metadata=none"
   }
 ]
