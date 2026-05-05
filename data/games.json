@@ -142,5 +142,21 @@
     "url": "https://tiny-fishing.game-files.crazygames.com/tiny-fishing/7/index.html?czyExpNexx360UserSync_CZY_18427=ineligible&isNewUser=false",
     "category": "Water",
     "thumbnail": "https://imgs.crazygames.com/games/tiny-fishing/cover_1x1-1707829871792.png?format=auto&quality=70&metadata=none"
+  },
+  {
+    "id": "drive-mad",
+    "title": "Drive Mad",
+    "description": "Drive Mad is a car game where you drive on a track filled with obstacles. Your goal is to reach the finish line in one piece. You have to balance your speed so your car doesn't flip over.",
+    "url": "https://f9564e4e-ef25-4e4b-ba67-cb11a1576bbd.gdn.poki.com/89e77fa7-ab67-4eb7-91ea-10c05ed7463f/index.html?country=US&ccpaApplies=0&url_referrer=https%3A%2F%2Fpoki.com%2F&tag=pg-da3e15ba0707b552ceb39e48cc10d4990c507de7&site_id=3&iso_lang=en&poki_url=https%3A%2F%2Fpoki.com%2Fen%2Fg%2Fdrive-mad&hoist=yes&nonPersonalized=n&cloudsavegames=n&familyFriendly=n&device=desktop&categories=1%2C76%2C78%2C93%2C96%2C103%2C377%2C390%2C893%2C929%2C1126%2C1139%2C1140%2C1177%2C1185%2C1190%2C1193&special_condition=landing&game_id=f9564e4e-ef25-4e4b-ba67-cb11a1576bbd&game_version_id=89e77fa7-ab67-4eb7-91ea-10c05ed7463f&inspector=0&csp=1",
+    "category": "Drive",
+    "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/4abc77cf2ca8a1ca37416249429501f4/drive-mad-logo.png"
+  },
+  {
+    "id": "taxi-police-chase",
+    "title": "Taxi Police Chase",
+    "description": "Taxi Police Chase puts you in thrilling cop pursuits! Evade police in this cartoonish driving game. Weave through traffic, jump ramps, and collect boosts to escape.",
+    "url": "https://3e8505f8-8bbb-4d41-94a2-994354661126.gdn.poki.com/890b67d4-e74c-42fa-bb17-729ca93d82fe/index.html?country=US&ccpaApplies=0&url_referrer=https%3A%2F%2Fpoki.com%2F&tag=pg-da3e15ba0707b552ceb39e48cc10d4990c507de7&site_id=3&iso_lang=en&poki_url=https%3A%2F%2Fpoki.com%2Fen%2Fg%2Fblacktop-police-chase&hoist=yes&nonPersonalized=n&cloudsavegames=n&familyFriendly=n&device=desktop&categories=1%2C76%2C78%2C81%2C93%2C399%2C750%2C893%2C1140%2C1190&special_condition=landing&game_id=3e8505f8-8bbb-4d41-94a2-994354661126&game_version_id=890b67d4-e74c-42fa-bb17-729ca93d82fe&inspector=0&csp=1",
+    "category": "Drive",
+    "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/5b99bb58d0c409a9ebef08bdfe6aeba4/blacktop-police-chase-logo.png"
   }
 ]
